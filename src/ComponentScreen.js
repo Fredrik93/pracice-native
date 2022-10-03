@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Text, StyleSheet } from 'react-native'
+import HomeScreen from './screens/HomeScreen'
 
 const ComponentsScreen = () => {
-    return <Text style={styles.textStyle} > The Component Screen! </Text>
+    return (
+        <Fragment>
+            <HomeScreen homeText="The Home Screen rendered" />
+        </Fragment>
+    )
 }
 
 const styles = StyleSheet.create({
