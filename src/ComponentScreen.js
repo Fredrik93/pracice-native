@@ -2,7 +2,7 @@ import React from 'react'
 import { Text, StyleSheet } from 'react-native'
 
 const ComponentsScreen = () => {
-    return <Text style={styles.textStyle} > The Component Screen </Text>
+    return <Text style={styles.textStyle} > The Component Screen! </Text>
 }
 
 const styles = StyleSheet.create({
