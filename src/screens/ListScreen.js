@@ -19,7 +19,7 @@ const ListScreen = () => {
             data={friends}
             //you can destructure this and write renderItem=({item}) => .. instead
             renderItem={(elem) => {
-                return <Text> {elem.item.name}</Text>
+                return <Text key={elem.item.name}> {elem.item.name}</Text>
             }} />)
 }
 
