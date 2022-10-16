@@ -30,6 +30,7 @@ const ListScreen = () => {
 
 const styles = StyleSheet.create({
     textStyle: {
+        backgroundColor: "yellow",
         marginVertical: 50
     }
 })

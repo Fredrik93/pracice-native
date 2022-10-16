@@ -6,4 +6,6 @@ const HomeScreen = (props) => {
     return <Text> {props.homeText} </Text>
 }
 
+
+
 export default HomeScreen
