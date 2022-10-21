@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Button, Text, StyleSheet } from 'react-native'
+import { View, Button, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import { clickProps } from 'react-native-web/dist/cjs/modules/forwardedProps'
 
 const HomeScreen = () => {
@@ -8,6 +8,12 @@ const HomeScreen = () => {
         <Button
         onPress={()=> console.log("Button Pressed")}
         title='Go to Components Demo' />
+
+        <TouchableOpacity
+        onPress={()=>{console.log("List Pressed")}}
+        >
+            <Text>Go To List Demo</Text>
+            </TouchableOpacity>      
          </View> 
 }
 
