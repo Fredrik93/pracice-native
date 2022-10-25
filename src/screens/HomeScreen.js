@@ -2,11 +2,11 @@ import React from 'react'
 import { View, Button, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import { clickProps } from 'react-native-web/dist/cjs/modules/forwardedProps'
 
-const HomeScreen = () => {
+const HomeScreen = (props) => {
     return <View> 
         <Text style={styles.text} > {"Home Screen"} </Text>
         <Button
-        onPress={()=> console.log("Button Pressed")}
+        onPress={()=> props.navigation.navigate("Components")}
         title='Go to Components Demo' />
 
         <TouchableOpacity
