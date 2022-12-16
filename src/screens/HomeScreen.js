@@ -1,8 +1,13 @@
 import React from 'react'
 import { View, Button, Text, StyleSheet, TouchableOpacity } from 'react-native'
+import ImageScreen from './ImageScreen'
+import ListScreen from './ListScreen'
 
 const HomeScreen = ({ navigation }) => {
-    return <View>
+    return <View style={styles.image} >
+
+        <ImageScreen />
+
         <Text style={styles.text} > {"Home Screen"} </Text>
         <Button
             onPress={() => navigation.navigate("Components")}
@@ -19,7 +24,7 @@ const HomeScreen = ({ navigation }) => {
             <Text>Go To List Demo</Text>
         </TouchableOpacity>
 
-        <Button title='Go to List Demo'
+        <Button title='Go to Image Demo'
             onPress={() => { navigation.navigate('Images') }}
         />
 
@@ -29,6 +34,12 @@ const HomeScreen = ({ navigation }) => {
 }
 
 const styles = StyleSheet.create({
+    image: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        border: "2px solid black"
+    },
     text: {
         fontSize: 30
     },
