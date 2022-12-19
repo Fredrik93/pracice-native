@@ -1,7 +1,13 @@
 import React, { Fragment } from 'react'
-import { StyleSheet, Text, Image, TextBase } from 'react-native'
+import { StyleSheet, Text, Image, TextBase, View } from 'react-native'
+import ImageDetail from '../components/ImageDetail'
 const ImageScreen = () => {
-    return (<Text >Image Screen</Text>
+    return (
+        <View>
+            <ImageDetail title="forest" />
+            <ImageDetail title="beach" />
+            <ImageDetail title="mountain" />
+        </View>
     )
 }
 
