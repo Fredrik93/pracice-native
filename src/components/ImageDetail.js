@@ -1,12 +1,12 @@
-import React, { Fragment } from 'react'
-import { StyleSheet, Text, Image, TextBase, View } from 'react-native'
-const ImageDetail = (props) => {
+import React from 'react'
+import { StyleSheet, Text, View } from 'react-native'
 
-    console.log(props)
+const ImageDetail = ({imageSource, title,score}) => {
     return (
         <View>
-        <img src={props.imageSource} />
-        <Text > Text: {props.title}</Text>
+        <img src={imageSource} />
+        <Text > Text: {title}</Text>
+        <Text> Score - {score} </Text>
         </View>
     )
 }

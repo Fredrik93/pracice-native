@@ -1,12 +1,12 @@
 import React from 'react'
 import { View, Button, Text, StyleSheet, TouchableOpacity } from 'react-native'
+import CounterScreen from './CounterScreen'
 import ImageScreen from './ImageScreen'
 import ListScreen from './ListScreen'
 
 const HomeScreen = ({ navigation }) => {
     return <View style={styles.image} >
-
-        <ImageScreen />
+        <CounterScreen/>
 
         <Text style={styles.text} > {"Home Screen"} </Text>
         <Button
