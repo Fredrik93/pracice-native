@@ -1,19 +1,18 @@
-import React, {useState} from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import React, { useState } from 'react'
+import { StyleSheet, View, Text, Button } from 'react-native'
 
 
-const CounterDetail = ()=> {
-const [count,setCounter] = useState(0);
+const CounterDetail = () => {
+    const [count, setCounter] = useState(0);
     const decreaseValue = () => {
-        if(count > 0){
-            setCounter(count-1)
+        if (count > 0) {
+            setCounter(count - 1)
         }
     }
     return (<View>
         <Text> Count: {count}</Text>
-        <button onClick={()=> setCounter(count+1)} > Increase </button>
-        <button onClick={()=> decreaseValue() } >Decrease </button>
-        </View>)
+        <Button title='Increase' onPress={() => { alert("tjeenare") }} />
+    </View>)
 }
 
 const styles = StyleSheet.create({
