@@ -1,16 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import {View,Text,StyleSheet} from 'react-native'
+import ColorCounter from '../components/ColorCounter'
 
 const SquareScreen = () => {
+    const [red,setRed] = useState(0)
+console.log(red)
     return (
         <View>
-            <Text> Square screen</Text>
+            <ColorCounter  color="Red" onIncrease={()=> setRed(red+1)} onDecrease={()=> setRed(red-1)}/>
+            <ColorCounter  color="Blue" />
+            <ColorCounter color="Green" />
         </View>
     )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+   
+})
 
 export default SquareScreen
 
