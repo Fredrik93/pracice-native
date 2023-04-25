@@ -1,17 +1,26 @@
-import React, { useState } from 'react'
+import React, { useReducer, useState } from 'react'
 import { StyleSheet, View, Text } from 'react-native'
 import CounterDetail from '../components/CounterDetail'
+
+const reducer = (state, action) => {
+    switch (action.type) {
+        case 'change_count':
+            return { ...state, count: state.count + action.payload }
+        default:
+            return state
+    }
+}
 const CounterScreen = () => {
-    const [count, setCount] = useState(0)
+    const [state, dispatch] = useReducer(reducer, { count: 0 })
 
     const increaseCount = () => {
-        setCount(count + 1)
+        dispatch({ type: 'change_count', payload: 1 })
     }
     return (
 
         <View>
             <CounterDetail
-                count={count}
+                count={state.count}
                 increaseCount={() => increaseCount()}
             />
         </View>
