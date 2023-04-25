@@ -6,7 +6,6 @@ import ListScreen from './ListScreen'
 
 const HomeScreen = ({ navigation }) => {
     return <View style={styles.image} >
-        <CounterScreen/>
 
         <Text style={styles.text} > {"Home Screen"} </Text>
         <Button
@@ -28,10 +27,10 @@ const HomeScreen = ({ navigation }) => {
             onPress={() => { navigation.navigate('Images') }}
         />
         <View style={styles.space} />
-        <Button title='Go to counter demo' onPress={()=>{navigation.navigate('Counter')}} />
-        <Button title='Color App' onPress={()=>{navigation.navigate('Colors')}} />
+        <Button title='Go to counter demo' onPress={() => { navigation.navigate('Counter') }} />
+        <Button title='Color App' onPress={() => { navigation.navigate('Colors') }} />
 
-    <Button title="Color square" onPress={()=>{navigation.navigate('Square')}} />
+        <Button title="Color square" onPress={() => { navigation.navigate('Square') }} />
 
     </View>
 }
