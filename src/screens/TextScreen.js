@@ -3,6 +3,11 @@ import { View, Text, TextInput, StyleSheet } from 'react-native'
 
 const TextScreen = () => {
     const [name, setName] = useState('')
+
+    const checkLengthOfPassword = () => {
+        return name.length < 5 ? <Text>Password must be longer than 5 characters</Text> : null
+
+    }
     return (
         <View>
             <TextInput
@@ -12,7 +17,8 @@ const TextScreen = () => {
                 value={name}
                 onChangeText={(newValue) => setName(newValue)}
             />
-            <Text>Enter name: {name}</Text>
+            <Text>Enter password: {name}</Text>
+            {checkLengthOfPassword()}
         </View>
     )
 }
