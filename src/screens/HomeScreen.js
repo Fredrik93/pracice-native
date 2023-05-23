@@ -9,6 +9,7 @@ const HomeScreen = ({ navigation }) => {
 
         <Text style={styles.text} > {"Home Screen"} </Text>
         <Button title="Box Screen" onPress={() => navigation.navigate("Box")} />
+        <Button title="User input for boxes" onPress={() => navigation.navigate("UserInput")} />
         <Button title="Text Screen"
 
             onPress={() => navigation.navigate("Text")}

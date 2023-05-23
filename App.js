@@ -10,6 +10,7 @@ import ListScreen from './src/screens/ListScreen';
 import SquareScreen from './src/screens/SquareScreen';
 import TextScreen from './src/screens/TextScreen';
 import BoxScreen from './src/screens/BoxScreen';
+import UserInputScreen from './src/screens/UserInputScreen';
 const navigator = createStackNavigator(
   {
     Home: HomeScreen,
@@ -21,7 +22,8 @@ const navigator = createStackNavigator(
     Colors: ColorScreen,
     Square: SquareScreen,
     Text: TextScreen,
-    Box: BoxScreen
+    Box: BoxScreen,
+    UserInput: UserInputScreen
   },
   {
     initialRouteName: 'Home',
