@@ -1,14 +1,33 @@
-import React, { Fragment } from 'react'
-import { Text, View, StyleSheet } from 'react-native'
+import React, { Fragment, useState } from 'react'
+import { Text, View, StyleSheet, TextInput, Button, SafeAreaView } from 'react-native'
+import { FlatList } from 'react-native-web'
 
 const UserInputScreen = () => {
+    const [boxName, setBoxName] = useState('')
+    const [boxes, setBoxes] = useState(['boxOne', 'boxTwo'])
+    const handleBoxes = () => {
+        const newName = boxName;
+        console.log(newName)
+        setBoxes((previousValue) => [...previousValue, newName])
+        setBoxName('')
+
+    }
+    console.log(boxes)
     return (<View style={styles.ViewStyle} >
-        <Text style={styles.TextStyle}>Child one</Text>
-        <Text style={styles.TextStyle}>Child two</Text>
-        <Text style={styles.TextStyle}>Child threeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</Text>
-        <Text style={styles.TextStyle}>Child four</Text>
+        <TextInput autoCapitalize='none'
+            autoCorrect='true'
+            value={boxName}
+            onChangeText={(value) => setBoxName(value)}
+        />
+        <Button title='Save' onPress={() => handleBoxes()} />
 
+        <FlatList
 
+            style={{ borderColor: 'black', borderWidth: 1 }}
+            data={boxes}
+            renderItem={({ item }) => { return < Text > Box {item}</Text> }}
+            keyExtractor={(index) => index.toString() + Math.random()}
+        />
 
     </View >)
 }
