@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-import {View,StyleSheet,Button} from 'react-native'
+import { View, StyleSheet, Button, FlatList } from 'react-native'
 
 const ColorScreen = () => {
+
  //   const [colors, setColors] = useState([]);
     console.log(colors)
     return <View>
@@ -10,6 +11,7 @@ const ColorScreen = () => {
         
         }}/>
         <View style={{height:100,width:100, backgroundColor:randomRgb()}} />
+
     </View>
 }
 

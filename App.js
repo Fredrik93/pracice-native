@@ -7,6 +7,10 @@ import DividendScreen from './src/screens/DividendScreen';
 import HomeScreen from './src/screens/HomeScreen';
 import ImageScreen from './src/screens/ImageScreen';
 import ListScreen from './src/screens/ListScreen';
+import SquareScreen from './src/screens/SquareScreen';
+import TextScreen from './src/screens/TextScreen';
+import BoxScreen from './src/screens/BoxScreen';
+import UserInputScreen from './src/screens/UserInputScreen';
 const navigator = createStackNavigator(
   {
     Home: HomeScreen,
@@ -15,7 +19,11 @@ const navigator = createStackNavigator(
     Counter: CounterScreen,
     Dividends: DividendScreen,
     Images: ImageScreen,
-    Colors: ColorScreen
+    Colors: ColorScreen,
+    Square: SquareScreen,
+    Text: TextScreen,
+    Box: BoxScreen,
+    UserInput: UserInputScreen
   },
   {
     initialRouteName: 'Home',

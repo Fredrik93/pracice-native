@@ -6,9 +6,16 @@ import ListScreen from './ListScreen'
 
 const HomeScreen = ({ navigation }) => {
     return <View style={styles.image} >
-        <CounterScreen/>
 
         <Text style={styles.text} > {"Home Screen"} </Text>
+        <Button title="Box Screen" onPress={() => navigation.navigate("Box")} />
+        <Button title="User input for boxes" onPress={() => navigation.navigate("UserInput")} />
+        <Button title="Text Screen"
+
+            onPress={() => navigation.navigate("Text")}
+        />
+        <View style={styles.space} />
+
         <Button
             onPress={() => navigation.navigate("Components")}
             title='Go to Components Demo' />
@@ -28,9 +35,10 @@ const HomeScreen = ({ navigation }) => {
             onPress={() => { navigation.navigate('Images') }}
         />
         <View style={styles.space} />
-        <Button title='Go to counter demo' onPress={()=>{navigation.navigate('Counter')}} />
-        <Button title='Color App' onPress={()=>{navigation.navigate('Colors')}} />
+        <Button title='Go to counter demo' onPress={() => { navigation.navigate('Counter') }} />
+        <Button title='Color App' onPress={() => { navigation.navigate('Colors') }} />
 
+        <Button title="Color square" onPress={() => { navigation.navigate('Square') }} />
 
     </View>
 }
